@@ -1,0 +1,10 @@
+[
+  {
+    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=csv&limit=0&distinct=true&resource_id=c8b9f9c8-4612-4068-934f-d4acd2e3c06e",
+    "name": "test1.csv"
+  },
+  {
+    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=csv&limit=0&distinct=true&resource_id=c8b9f9c8-4612-4068-934f-d4acd2e3c06e",
+    "name": "test2.csv"
+  }
+]
