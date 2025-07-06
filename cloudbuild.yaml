@@ -5,5 +5,5 @@ steps:
     args: ['build', '-t', 'gcr.io/shabtsak/github.com/dragon74/datagov:$COMMIT_SHA', '.']
 
 images:
-  - 'gcr.io/$PROJECT_ID/datagov'
+  - 'gcr.io/shabtsak/github.com/dragon74/datagov:$COMMIT_SHA'
 
