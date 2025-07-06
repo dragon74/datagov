@@ -1,0 +1,9 @@
+logsBucket: gs://datagov-il
+
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/shabtsak/github.com/dragon74/datagov:$COMMIT_SHA', '.']
+
+images:
+  - 'gcr.io/$PROJECT_ID/datagov'
+
