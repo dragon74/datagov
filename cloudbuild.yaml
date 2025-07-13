@@ -2,8 +2,8 @@ logsBucket: gs://datagov-il
 
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/shabtsak/github.com/dragon74/datagov:$COMMIT_SHA', '.']
+    args: ['build', '-t', 'gcr.io/shabtsak/github.com/dragon74/datagov:latest', '.']
 
 images:
-  - 'gcr.io/shabtsak/github.com/dragon74/datagov:$COMMIT_SHA'
+  - 'gcr.io/shabtsak/github.com/dragon74/datagov:latest'
 
