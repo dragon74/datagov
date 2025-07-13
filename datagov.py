@@ -26,6 +26,33 @@ import io
 import ijson
 from google.cloud import storage
 
+def fixObject(obj):
+    """
+    Manipulate or fix the object as needed before saving.
+    - If a field is only '-' or 'null' (after trimming), set to empty value.
+    - If field name is 'TEL_MISPAR', pad to 10 characters with zeroes from the left.
+    """
+    fixed = {}
+    for k, v in obj.items():
+        # Convert to string for checks, but preserve None
+        val = v if v is not None else ''
+        # Check for DATA_YEAR == 0
+        if k == 'DATA_YEAR' and (val == 0 or (isinstance(val, str) and val.strip() == '0')):
+            fixed[k] = ''
+            continue
+        if isinstance(val, str):
+            trimmed = val.strip()
+            if trimmed == '-' or trimmed.lower() == 'null':
+                fixed[k] = ''
+            elif k == 'MISPAR_TEL':
+                # Pad TEL_MISPAR to 10 digits with leading zeroes
+                fixed[k] = trimmed.zfill(10)
+            else:
+                fixed[k] = val
+        else:
+            fixed[k] = val
+    return fixed
+
 # Get environment variables for task division
 my_task_num = int(os.environ.get('CLOUD_RUN_TASK_INDEX', '0'))
 total_task_num = int(os.environ.get('CLOUD_RUN_TASK_COUNT', '1'))
@@ -76,24 +103,28 @@ for idx in range(start_idx, end_idx):
         new_url = urlunparse((parsed.scheme, parsed.netloc, parsed.path, parsed.params, new_query, parsed.fragment))
 
         with urllib.request.urlopen(new_url) as fileobj:
-            # Use ijson to stream the 'records' field as a string (not as a JSON array)
-            parser = ijson.parse(fileobj)
-            found = False
-            for prefix, event, value in parser:
-                if prefix == 'result.records' and event == 'string':
-                    found = True
-                    # value is the string content of the records field
-                    records_bytes = value.encode('utf-8')
-                    buffer = io.BytesIO(records_bytes)
-                    blob.upload_from_file(buffer, rewind=True)
-                    print(f"Downloaded and streamed records string from {new_url} to gs://{bucket_name}/{blob_name}")
-                    break
-            if not found:
-                raise Exception(f"No 'records' string field found in response for {new_url}")
+            # Use ijson to stream the 'records' array of objects
+            buffer = io.BytesIO()
+            buffer.write(b'[')
+            first = True
+            for record in ijson.items(fileobj, 'result.records.item'):
+                fixed_record = fixObject(record)
+                if not first:
+                    buffer.write(b',')
+                else:
+                    first = False
+                buffer.write(json.dumps(fixed_record, ensure_ascii=False).encode('utf-8'))
+            buffer.write(b']')
+            buffer.seek(0)
+            blob.upload_from_file(buffer, rewind=True)
+            print(f"Downloaded and streamed records array from {new_url} to gs://{bucket_name}/{blob_name}")
     except Exception as e:
         print(f"Failed to process {url}: {e}")
         exit(1)  # Exit with error if any URL fails
 
 # All URLs processed successfully
-print(f"Task {my_task_num} completed processing URLs from index {start_idx} to {end_idx - 1}.")
-exit(0)  # Exit successfully after processing all URLs
+print(f"Task {my_task_num} completed processing URLs from url index {start_idx} to {end_idx - 1}.")
+exit(0)  # Exit successfully after processing all URLs      
+
+
+# End of datagov.py

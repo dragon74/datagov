@@ -1,10 +1,6 @@
 [
   {
-    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=csv&limit=0&distinct=true&resource_id=c8b9f9c8-4612-4068-934f-d4acd2e3c06e",
-    "name": "test1.csv"
-  },
-  {
-    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=csv&limit=0&distinct=true&resource_id=c8b9f9c8-4612-4068-934f-d4acd2e3c06e",
-    "name": "test2.csv"
+    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects&limit=0&distinct=true&resource_id=b2970446-98e0-483a-86c1-7ec00170b386",
+    "name": "acedemics.json"
   }
 ]
