@@ -56,8 +56,8 @@ def fixObject(obj):
 # Get environment variables for task division
 my_task_num = int(os.environ.get('CLOUD_RUN_TASK_INDEX', '0'))
 total_task_num = int(os.environ.get('CLOUD_RUN_TASK_COUNT', '1'))
-bucket_name = 'datagov-il' #os.environ['GCS_BUCKET_NAME']
- 
+bucket_name = os.environ['GCS_BUCKET_NAME']
+
 # Read URL objects from the input JSON file
 with open('data_urls.json', 'r') as f:
     url_objs = json.load(f)

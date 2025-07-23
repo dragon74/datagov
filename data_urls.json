@@ -1,50 +1,50 @@
 [
   {
-    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects &limit=0&distinct=true&resource_id=03adc637-b6fe-402b-9937-7c3d3afc9140",
+    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects&limit=0&distinct=true&resource_id=03adc637-b6fe-402b-9937-7c3d3afc9140",
     "name": "cars_self_import.json"
   },
   {
-    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects &limit=0&distinct=true&resource_id=4eb61bd6-18cf-4e7c-9f9c-e166dfa0a2d8",
+    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects&limit=0&distinct=true&resource_id=4eb61bd6-18cf-4e7c-9f9c-e166dfa0a2d8",
     "name": "kablanim.json"
   },
   {
-    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects &limit=0&distinct=true&resource_id=a8ca5203-7adc-4bc1-a0ed-3fd4eaa74dcc",
+    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects&limit=0&distinct=true&resource_id=a8ca5203-7adc-4bc1-a0ed-3fd4eaa74dcc",
     "name": "modedim.json"
   },
   {
-    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects &limit=0&distinct=true&resource_id=9c55a7dd-3b92-4141-811c-5e30cc74a8a4",
+    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects&limit=0&distinct=true&resource_id=9c55a7dd-3b92-4141-811c-5e30cc74a8a4",
     "name": "foodies.json"
   },
   {
-    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects &limit=0&distinct=true&resource_id=31c36cee-80e1-482e-9661-7539c4b27c1b",
+    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects&limit=0&distinct=true&resource_id=31c36cee-80e1-482e-9661-7539c4b27c1b",
     "name": "food_importers.json"
   },
   {
-    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects &limit=0&distinct=true&resource_id=9c64c522-bbc2-48fe-96fb-3b2a8626f59e",
+    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects&limit=0&distinct=true&resource_id=9c64c522-bbc2-48fe-96fb-3b2a8626f59e",
     "name": "doctors.json"
   },
   {
-    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects &limit=0&distinct=true&resource_id=3ead5fae-3513-46f8-a458-959ea3e035ae",
+    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects&limit=0&distinct=true&resource_id=3ead5fae-3513-46f8-a458-959ea3e035ae",
     "name": "notaries.json"
   },
   {
-    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects &limit=0&distinct=true&resource_id=b2970446-98e0-483a-86c1-7ec00170b386",
+    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects&limit=0&distinct=true&resource_id=b2970446-98e0-483a-86c1-7ec00170b386",
     "name": "acedemics.json"
   },
   {
-    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects &limit=0&distinct=true&resource_id=39f455bf-6db0-4926-859d-017f34eacbcb",
+    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects&limit=0&distinct=true&resource_id=39f455bf-6db0-4926-859d-017f34eacbcb",
     "name": "car_importers.json"
   },
   {
-    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects &limit=0&distinct=true&resource_id=bb68386a-a331-4bbc-b668-bba2766d517d",
+    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects&limit=0&distinct=true&resource_id=bb68386a-a331-4bbc-b668-bba2766d517d",
     "name": "garages.json"
   },
   {
-    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects &limit=0&distinct=true&resource_id=8d13ebff-f4f2-41e6-a39d-663f1c96c196",
+    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects&limit=0&distinct=true&resource_id=8d13ebff-f4f2-41e6-a39d-663f1c96c196",
     "name": "services_contructors.json"
   },
   {
-    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects &limit=0&distinct=true&resource_id=5938933b-35ce-4a73-9026-59ea377ee1b0",
+    "url": "https://data.gov.il/api/3/action/datastore_search?include_total=true&records_format=objects&limit=0&distinct=true&resource_id=5938933b-35ce-4a73-9026-59ea377ee1b0",
     "name": "hr_contructors.json"
   }
 ]
